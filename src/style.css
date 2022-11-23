@@ -4,6 +4,8 @@
 :root {
     --main-bg-color: rgba(18,18,20,255);
     --main-text-color: #fafafa;
+
+    --form-text-color: #e3d8d8;
 }
 body {
     background: var(--main-bg-color);
@@ -63,6 +65,7 @@ header button:hover {
     color: var(--main-text-color);
     font-size: 1.5rem;
     transition: 100ms;
+    border-image: linear-gradient(to left, rgb(31, 31, 30), rgb(230, 225, 225)) 1 0;
 }
 #hero #reservation_button:hover {
     box-shadow: 4px 4px #202025;
@@ -78,12 +81,12 @@ header button:hover {
 }
 
 /* main page */
-.main_grid {
+#main_grid {
     display:grid;
     grid-template-columns: repeat(4,1fr);
     justify-items: end;
 }
-.main_grid h3 {
+#main_grid h3 {
     color:var(--main-text-color);
     grid-column: 1/3;
     align-self: center;
@@ -92,7 +95,7 @@ header button:hover {
     border:solid 3px black;
     font-size: larger;
 }
-.main_grid img {
+#main_grid img {
     grid-column: 3/5;
     width:100%;
     max-width:800px;
@@ -100,6 +103,58 @@ header button:hover {
     border-bottom: solid 2px #2f2f33;
     transition: 200ms;
 }
-.main_grid img:hover {
+#main_grid img:hover {
     transform: scale(1.1);
+}
+
+/* RESERVATION FORM */
+#reservation_form {
+    color:var(--form-text-color);
+    display:grid;
+    grid-template-rows: repeat(4,1fr);
+    grid-template-columns: auto;
+    align-items: center;
+}
+#reservation_form label {
+    text-align: center;
+}
+#reservation_form input {
+
+}
+#reservation_form p {
+    text-align: center;
+}
+
+
+
+/* MENU */
+.menuBox {
+    width:200px;
+    height:200px;
+    border:solid 3px rgb(33, 33, 33);
+    background-position: center;
+    transition: 200ms;
+    border-radius: 10px;
+    padding:15px;
+    background-repeat: no-repeat;
+}
+.menuBox:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    
+}
+#menuBox1 {
+    background-image: url('./sushi1.png');
+}
+#menuBox2 {
+    background-image: url('./lunch1.png');
+}
+#menuBox3 {
+    background-image: url('./dessert1.png');
+}
+#menuBox4 {
+    background-image: url('bbq1.png');
+}
+#menuBox5 {
+    background-image: url('./drinks1.png');
 }

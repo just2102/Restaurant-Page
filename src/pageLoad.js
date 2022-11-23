@@ -2,10 +2,9 @@ import Seattle from './seattle.jpg'
 import Salmon from './salmon.jpg'
 function pageLoad() {
     let content = document.getElementById('content');
-    
     // MAIN PAGE
     let grid = document.createElement('div')
-    grid.setAttribute('class','main_grid')
+    grid.setAttribute('id','main_grid')
     content.appendChild(grid);
 
     let gridText1 = document.createElement('h3')
