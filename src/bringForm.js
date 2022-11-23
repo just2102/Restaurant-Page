@@ -59,6 +59,11 @@ function bringForm() {
     commentFieldLabel.innerText = 'Your comments'
     form.appendChild(commentFieldLabel)
     form.appendChild(commentField)
+    // reservation button
+    let reserveButton = document.createElement('button');
+    reserveButton.setAttribute('id','reserve_form_button')
+    reserveButton.innerText =   'Request reservation'
+    form.appendChild(reserveButton)
 
     mainGrid.appendChild(form)
 }

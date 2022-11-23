@@ -1,5 +1,5 @@
-import Seattle from './seattle.jpg'
-import Salmon from './salmon.jpg'
+import Seattle from './img/seattle.jpg'
+import Salmon from './img/salmon.jpg'
 function pageLoad() {
     let content = document.getElementById('content');
     // MAIN PAGE

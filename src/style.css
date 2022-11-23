@@ -1,15 +1,42 @@
 * {
     
 }
+
+@font-face {
+    font-family: 'louis_george_cafe_lightRg';
+    src: url('./fonts/louis_george_cafe_light-webfont.woff2') format('woff2'),
+         url('./fonts/louis_george_cafe_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'louis_george_caferegular';
+    src: url('./fonts/louis_george_cafe-webfont.woff2') format('woff2'),
+         url('./fonts/louis_george_cafe-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'harukazeregular';
+    src: url('./fonts/harukaze-webfont.woff2') format('woff2'),
+         url('./fonts/harukaze-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     --main-bg-color: rgba(18,18,20,255);
     --main-text-color: #fafafa;
-
+    --regular-font-light: 'louis_george_cafe_lightRg';
+    --regular-font-normal: 'louis_george_caferegular';
+    --title-font: 'harukazeregular';
     --form-text-color: #e3d8d8;
 }
 body {
     background: var(--main-bg-color);
-    background-image: url('./sushi.jpg');
+    background-image: url('./img/sushi.jpg');
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
@@ -30,9 +57,9 @@ header {
     background: linear-gradient(90deg, rgba(59,60,64,1) 0%, rgba(22,22,24,1) 46%, rgba(16,15,20,1) 100%);
     width:100%;
     box-sizing: content-box;
-    
 }
 header button {
+    font-family: var(--regular-font-normal);
     background: #3f3f46;
     color:var(--main-text-color);
     border:none;
@@ -40,14 +67,21 @@ header button {
     padding:10px;
     box-sizing: border-box;
     font-size: large;
+    transition: 100ms;
 }
 header button:hover {
     cursor: pointer;
+    background: rgb(63, 63, 70,0.7);
 }
 
-#logo {
+#logo a{
+    font-family: var(--title-font);
+    font-size:larger;
     justify-self: start;
-    color:var(--main-text-color)
+    color:var(--main-text-color);
+    margin-left:5vw;
+    border:solid 3px rgb(121, 42, 42);
+    text-decoration: none;
 }
 #logo:hover {
     cursor:pointer;
@@ -59,7 +93,11 @@ header button:hover {
     text-align: center;
     color:snow;
 }
+#hero h2 {
+    font-family: var(--regular-font-normal)
+}
 #hero #reservation_button{
+    font-family: var(--regular-font-normal);
     padding:5px;
     background: #27272a;
     color: var(--main-text-color);
@@ -74,6 +112,7 @@ header button:hover {
 }
 /* CONTENT */
 #content {
+    font-family: var(--regular-font-normal);
     margin-top:5rem;
     border:solid 2px #3f3f46;
     margin-left:2rem;
@@ -82,6 +121,7 @@ header button:hover {
 
 /* main page */
 #main_grid {
+    font-family: var(--regular-font-normal);
     display:grid;
     grid-template-columns: repeat(4,1fr);
     justify-items: end;
@@ -124,7 +164,21 @@ header button:hover {
 #reservation_form p {
     text-align: center;
 }
-
+#reservation_form button {
+    background: #3f3f46;
+    color:var(--main-text-color);
+    border:none;
+    border-radius: 10px;
+    padding:10px;
+    box-sizing: border-box;
+    font-size: large;
+    transition: 150ms;
+    margin-top:1rem;
+}
+#reservation_form button:hover {
+    cursor: pointer;
+    background: rgb(63, 63, 70,0.7);
+}
 
 
 /* MENU */
@@ -144,17 +198,34 @@ header button:hover {
     
 }
 #menuBox1 {
-    background-image: url('./sushi1.png');
+    background-image: url('./img/sushi1.png');
 }
 #menuBox2 {
-    background-image: url('./lunch1.png');
+    background-image: url('./img/lunch1.png');
 }
 #menuBox3 {
-    background-image: url('./dessert1.png');
+    background-image: url('./img/dessert1.png');
 }
 #menuBox4 {
-    background-image: url('bbq1.png');
+    background-image: url('./img/bbq1.png');
 }
 #menuBox5 {
-    background-image: url('./drinks1.png');
+    background-image: url('./img/drinks1.png');
+}
+
+
+/* LOCATIONS */
+#main_grid ul {
+    color:var(--main-text-color);
+    font-size: larger;
+    float:left;
+}
+#main_grid li {
+    margin-bottom:2rem;
+}
+
+
+/* ABOUT */
+#main_grid h2, #main_grid p {
+    color:var(--main-text-color)
 }
